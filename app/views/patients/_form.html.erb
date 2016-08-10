@@ -1,0 +1,27 @@
+<%= form_for @patient do |f| %>
+  <div>
+    <%= f.label :name%>
+    <%= f.text_field :name %>
+  </div>
+  <div>
+    <%= f.label :age %>
+    <%= f.text_area :age %>
+  </div>
+  <div>
+    <%= f.label :height %>
+    <%= f.text_area :height %>
+  </div>
+  <div>
+    <%= f.label :weight %>
+    <%= f.text_area :weight %>
+  </div>
+  <div>
+    <%= f.label :email %>
+    <%= f.text_area :email %>
+  </div>
+  <div>
+    <%= f.label :phone_number %>
+    <%= f.text_area :phone_number %>
+  </div>
+  <%= f.submit "Submit" %>
+<% end %>

@@ -1,0 +1,25 @@
+<h1>Patients</h1>
+
+<h3><%= link_to "New Patient", new_patient_path %></h2>
+
+<table style="width:50%" class= "table table-bordered">
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Height</th>
+    <th>Weight</th>
+    <th>Email</th>
+    <th>Phone#</th>
+  </tr>
+
+  <% @patients.each do |patient| %>
+    <tr>
+      <td><%= link_to patient.name, patient %></td>
+      <td><%= patient.age %></td>
+      <td><%= patient.height %></td>
+      <td><%= patient.weight %></td>
+      <td><%= patient.email %></td>
+      <td><%= patient.phone_number %></td>
+    </tr>
+  <% end %>
+</table>

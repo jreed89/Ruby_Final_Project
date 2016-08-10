@@ -1,0 +1,55 @@
+<h2><%= @patients.name %></h2>
+
+<p>Age: <%= @patients.age %></p>
+<p>Height: <%= @patients.height%>ft</p>
+<p>Weight: <%= @patients.weight%> lbs</p>
+<p>Email: <%= @patients.email%></p>
+<p>Phone#: <%= @patients.phone_number%></p>
+
+<%= link_to "Back to all Patients", patients_path %><br>
+<%= link_to "Edit Patient", edit_patient_path(@patients) %>
+<br>
+<%= link_to "Delete", patient_path(@patients), method: :delete, data: { confirm: 'Are you sure?' }
+%>
+
+<br>
+<h3>Charts</h3>
+<%= link_to "New Chart", new_chart_path(:patient_id => @patients.id) %>
+
+<table style="width:80%">
+  <tr>
+    <th>Date</th>
+    <th>Pre-Breathing</th>
+    <th>Pre-Swelling</th>
+    <th>Previous Accidents</th>
+    <th>Mobility</th>
+    <th>Pre-Digestive Problems</th>
+    <th>Blood Flow Rate</th>
+    <th>Post Breath</th>
+    <th>Post Swelling</th>
+    <th>Post-Digestive Problems</th>
+    <th>Bruising</th>
+    <th>Total Time</th>
+    <th>Missed Treatment</th>
+  </tr>
+
+  <% @patients.charts.each do |chart| %>
+    <tr>
+      <td><%= chart.date %></td>
+      <td><%= chart.pre_breath %></td>
+      <td><%= chart.pre_swelling %></td>
+      <td><%= chart.accident_since_last_treatment %></td>
+      <td><%= chart.change_mobility %></td>
+      <td><%= chart.pre_digestion_problems %></td>
+      <td><%= chart.blood_flow_rate %></td>
+      <td><%= chart.post_breath %></td>
+      <td><%= chart.post_swelling %></td>
+      <td><%= chart.post_digestion_problems %></td>
+      <td><%= chart.bruising %></td>
+      <td><%= chart.total_time %></td>
+      <td><%= chart.missed_treatment %></td>
+      <td><%= link_to "Show", chart_path(:patient_id => @patients.id) %></td>
+      <td><%= link_to "Edit", edit_chart_path(:patient_id => @patients.id) %></td>
+    </tr>
+  <% end %>
+</table>
