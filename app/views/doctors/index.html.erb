@@ -14,7 +14,7 @@
   <% @doctors.each do |doc| %>
     <tr>
       <!-- <td><%# link_to doc.name, doctor %></td> -->
-      <td><%= doc.name%></td>
+      <td><%= link_to doc.name, doc %></td>
       <td><%= doc.phone_number %></td>
       <td><%= doc.email %></td>
       <td><%= doc.specialty %></td>
