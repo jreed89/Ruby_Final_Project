@@ -1,6 +1,6 @@
 class ChartsController < ApplicationController
   def show
-    @chart = Chart.find(params[:patient_id])
+    @chart = Chart.find(params[:chart_id])
     @patients = Patient.find(params[:id])
   end
 
@@ -16,14 +16,14 @@ class ChartsController < ApplicationController
       redirect_to patient
     end
   def edit
-      @charts = Chart.find(params[:patient_id])
+      @charts = Chart.find(params[:chart_id])
       @patients = Patient.find(params[:id])
   end
   def update
     chart = Chart.find(params[:id])
     chart.update(chart_params)
-
-    redirect_to patient_url
+    patient = Patient.find(params[:chart][:patient_id])
+    redirect_to patient
   end
   private
   def chart_params
