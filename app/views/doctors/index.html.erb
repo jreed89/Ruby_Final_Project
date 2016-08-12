@@ -1,0 +1,23 @@
+<h1>Clinic Doctors</h1>
+
+<h3><%= link_to "Add a Doctor", new_doctor_path %></h2>
+
+<table style="width:50%">
+  <tr>
+    <th>Name</th>
+    <th>Phone #</th>
+    <th>Email</th>
+    <th>Specialize</th>
+
+  </tr>
+
+  <% @doctors.each do |doc| %>
+    <tr>
+      <!-- <td><%# link_to doc.name, doctor %></td> -->
+      <td><%= link_to doc.name, doc %></td>
+      <td><%= doc.phone_number %></td>
+      <td><%= doc.email %></td>
+      <td><%= doc.specialty %></td>
+    </tr>
+  <% end %>
+</table>

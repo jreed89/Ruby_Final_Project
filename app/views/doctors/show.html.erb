@@ -1,0 +1,15 @@
+<h1> Doctor</h1>
+
+
+
+<h2><%= @doctors.name %></h2>
+
+<p>Phone #: <%= @doctors.phone_number %></p>
+<p>Email: <%= @doctors.email %></p>
+<p>Specialty: <%= @doctors.specialty %></p>
+
+<%= link_to "Back to all Doctors", doctors_path %><br>
+<%= link_to "Edit Doctor", edit_doctor_path(@doctors) %>
+<br>
+<%= link_to "Delete", doctor_path(@doctors), method: :delete, data: { confirm: 'Are you sure?' }
+%>
