@@ -1,11 +1,10 @@
 <h2><%= @patients.name %></h2>
-
-<p>Age: <%= @patients.age %></p>
-<p>Height: <%= @patients.height%>ft</p>
-<p>Weight: <%= @patients.weight%> lbs</p>
-<p>Email: <%= @patients.email%></p>
-<p>Phone#: <%= @patients.phone_number%></p>
-
+<div style = "text-align:center; border:2px solid black;">
+<p><h5>Age: </h5><%= @patients.height%>ft</p>
+<p><h5>Weight: </h5><%= @patients.weight%> lbs</p>
+<p><h5>Email: </h5><%= @patients.email%></p>
+<p><h5>Phone#: </h5><%= @patients.phone_number%></p>
+</div>
 <%= link_to "Back to all Patients", patients_path %><br>
 <%= link_to "Edit Patient", edit_patient_path(@patients) %>
 <br>
