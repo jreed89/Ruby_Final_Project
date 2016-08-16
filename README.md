@@ -1,4 +1,6 @@
 
+<a href="https://homedialysis.herokuapp.com/sign_in">
+
 # Ruby Final: HomeDialysis
 
 The homedialysis app is much easier way for patients to keep track of there session information.  With this application, patients will be able to send there charts to there personal doctors without having to go personally deliver the information which can be diffuclt for some.  This app will help give more efficient feedback to patients as to what they need to do regularly to stay healthy.
