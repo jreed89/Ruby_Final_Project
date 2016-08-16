@@ -1,5 +1,5 @@
 
-<a href="https://homedialysis.herokuapp.com/sign_in">
+<a href="https://homedialysis.herokuapp.com/sign_in">HomeDialysis App</a>
 
 # Ruby Final: HomeDialysis
 
