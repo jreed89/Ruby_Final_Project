@@ -4,15 +4,19 @@
 <h4><%= link_to "Back to Patient", patient_path %></h4>
 
 <h3>Date: <%= @chart.date %></h3>
+<div id="show_chart">
     <p>Pre-Breathing: <%= @chart.pre_breath %></p>
     <p>Pre-Swelling: <%= @chart.pre_swelling %></p>
     <p>Previous Accidents: <%= @chart.accident_since_last_treatment %></p>
     <p>Mobility: <%= @chart.change_mobility %></p>
     <p>Pre-Digestive Problems: <%= @chart.pre_digestion_problems %></p>
-    <p>Blood Flow Rate: <%= @chart.blood_flow_rate %></p>
+    <p>Blood Flow Rate:
+      <h4><%= @chart.blood_flow_rate %></h4>
+    </p>
     <p>Post Breath: <%= @chart.post_breath %></p>
     <p>Post Swelling: <%= @chart.post_swelling %></p>
     <p>Post-Digestive Problems: <%= @chart.post_digestion_problems %></p>
     <p>Bruising: <%= @chart.bruising %></p>
     <p>Total Time: <%= @chart.total_time %></p>
     <p>Missed Treatment: <%= @chart.missed_treatment %></p>
+</div>

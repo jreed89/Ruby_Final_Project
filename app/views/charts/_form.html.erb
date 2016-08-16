@@ -1,6 +1,6 @@
 <%= form_for @charts do |f| %>
 <%= f.hidden_field :patient_id, :value => @patients.id %>
-<div>
+<div id='text_field'>
     <%= f.label :date %>
     <%= f.text_field :date %>
 </div>
