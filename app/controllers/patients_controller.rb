@@ -1,6 +1,6 @@
 class PatientsController < ApplicationController
   def index
-    @patients = Patient.all
+    @patients = User.find(session[:user]["id"]).patients
   end
 
   def show
@@ -12,12 +12,9 @@ class PatientsController < ApplicationController
   end
 
   def create
-    @patient = Patient.new(patient_params)
-    if @patient.save
-      redirect_to '/patients'
-    else
-      redirect_to '/patients/new'
-    end
+    @user = User.find(session[:user]["id"])
+    @patient = @user.patients.create!(patient_params)
+    redirect_to @patient
   end
 
   def edit
