@@ -13,9 +13,14 @@
  *= require_tree .
  *= require_self
  */
+ *{
+   background-color: ;
+ }
  h1 {
    font-style: oblique;
    color: green;
+   text-align: center;
+
  }
  tr:nth-child(even) {
    background-color: #f2f2f2
@@ -37,4 +42,8 @@
     box-sizing: border-box;
     background-color: #3CBC8D;
     color: white;
+}
+table{
+  float: none;
+  text-align: center;
 }
