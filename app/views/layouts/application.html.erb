@@ -9,6 +9,17 @@
   </head>
 
   <body>
+    <h1>HomeDialysis</h1>
+    <nav class="blue darken-4">
+      <% if session[:user] %>
+        <h4><a href="/sign_out"><%= session[:user]["username"] %>: sign out</a></h4>
+      <% else %>
+        <a href="/sign_up">Sign up</a>
+        <a href="/sign_in">Sign in</a>
+      <% end %>
+    </nav>
+    <br>
+    <em><%= flash[:notice] %></em>
     <%= yield %>
   </body>
 </html>
