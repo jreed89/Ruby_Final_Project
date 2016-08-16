@@ -1,57 +1,63 @@
 <%= form_for @charts do |f| %>
 <%= f.hidden_field :patient_id, :value => @patients.id %>
-<div id='text_field'>
+<div class ="font">
+<div class="input-field col s6" class="card-panel" >
     <%= f.label :date %>
     <%= f.text_field :date %>
 </div>
-<div>
+<div class="input-field col s6">
     <%= f.label :breathing_issues %>
     <%= f.text_field :pre_breath %>
 </div>
-<div>
+<div class="input-field col s6">
     <%= f.label :swelling_issues %>
     <%= f.text_field :pre_swelling %>
 </div>
-<div>
+<div class="input-field col s6">
     <%= f.label :accident_since_last_treatment %>
     <%= f.text_field :accident_since_last_treatment %>
 </div>
-<div>
+<div class="input-field col s6">
     <%= f.label :change_in_mobility %>
     <%= f.text_field :change_mobility %>
 </div>
-<div>
+<div class="input-field col s6">
     <%= f.label :any_pre_digestion_problems %>
     <%= f.text_field :pre_digestion_problems %>
 </div>
-<div>
+<div class="input-field col s6">
     <%= f.label :blood_flow_rate %>
     <%= f.number_field :blood_flow_rate %>
 </div>
-<div>
+<div class="input-field col s6">
     <%= f.label :post_breathing_issues %>
     <%= f.text_field :post_breath %>
 </div>
 <div>
+  <div class="input-field col s6">
     <%= f.label :post_swelling_issues %>
     <%= f.text_field :post_swelling %>
 </div>
 <div>
+  <div class="input-field col s6">
     <%= f.label :any_post_digestion_problems %>
     <%= f.text_field :post_digestion_problems %>
 </div>
 <div>
+  <div class="input-field col s6">
     <%= f.label :any_bruising %>
     <%= f.text_field :bruising %>
 </div>
 <div>
+  <div class="input-field col s6">
     <%= f.label :total_time %>
     <%= f.text_field :total_time %>
 </div>
 <div>
+  <div class="input-field col s6">
     <%= f.label :missed_treatment %>
     <%= f.text_area :missed_treatment %>
 </div>
-
-<%= f.submit "Submit" %>
+<div/>
+<%= f.submit "Submit", :class => "btn waves-effect waves-light" %>
 <% end %>
